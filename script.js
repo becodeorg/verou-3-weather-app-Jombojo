@@ -9,15 +9,18 @@ submitbutton.addEventListener('click', () => {
   let cityName = document.getElementById("citySearch");
   city = cityName.value;
   console.log(city);
-  console.log(cityName);
   const fullApi = api+city+units+weatherKey
   fetch(fullApi)
     .then(response => response.json())
-    .then(data => console.log(data));
-    console.log(weather.main.humidity)
+    .then(data => {
+      var weather = data;
+      console.log(weather) 
+    });
+    
 });
-
-
+const cardContainer = document.createElement("section");
+cardContainer.className = "card-container";
+main.appendchild(cardContainer);
 
 import Data from "./config.js";
 
