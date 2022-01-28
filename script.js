@@ -31,7 +31,7 @@ submitbutton.addEventListener('click', () => {
       addCard(data.list[32], "card", everyDay[4]);
     })
     
-      const cardInfo = (data) => {
+      const cardInfo = (data, image) => {
         const main = document.querySelector("main");
         const section = document.createElement("section");
         main.appendChild(section);
@@ -42,7 +42,7 @@ submitbutton.addEventListener('click', () => {
         locationH1.innerText = data.city.name;
         infoCard.appendChild(locationH1);
         const city = document.createElement("p");
-        city.innerText = data.city.country;
+        city.innerText ="Country: " + data.city.country;
         infoCard.appendChild(city);
         const cityImage = document.createElement("div");
         cityImage.className = "cityImage";
