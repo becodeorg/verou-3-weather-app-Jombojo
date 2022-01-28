@@ -89,7 +89,7 @@ submit.addEventListener('click', function () {
     locationH1.innerText = data.city.name;
     infoCard.appendChild(locationH1);
     const city = document.createElement("p");
-    city.innerText = data.city.country;
+    city.innerHTML = "<span>Country: </span>"+data.city.country;
     infoCard.appendChild(city);
     const cityImage = document.createElement("div");
     cityImage.className = "cityImage";
