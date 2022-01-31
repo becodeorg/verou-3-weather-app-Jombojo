@@ -22,9 +22,6 @@ body {
     background-image: linear-gradient(to right,black, yellow, red);
 }
 
-input{
+input, button{
     opacity: 0.5;
-}
-button{
-    opacity:0.5;
 }
