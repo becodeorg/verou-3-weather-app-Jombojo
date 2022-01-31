@@ -1,13 +1,13 @@
 import weatherKey from "./config.js"
-let api = 'https://api.openweathermap.org/data/2.5/forecast?q=';
-let city;
-let units = '&units=metric&appid=';
+
 
 const weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const main = document.querySelector("main");
-const submitbutton = document.querySelector('#submitbutton');
 
+const submitbutton = document.querySelector('#submitbutton');
 submitbutton.addEventListener('click', () => {
+  let api = 'https://api.openweathermap.org/data/2.5/forecast?q=';
+let city;
+let units = '&units=metric&appid=';
   let cityName = document.getElementById("citySearch");
   city = cityName.value;
   console.log(city);
